@@ -1,0 +1,14 @@
+clusterName: my-cluster
+chartMode: standalone
+teleportConfig:
+  teleport:
+    kex_algos:
+      - ecdh-sha2-nistp256
+      - ecdh-sha2-nistp384
+      - ecdh-sha2-nistp521
+    log:
+      format:
+        extra_fields: ~
+  kubernetes_service:
+    kube_cluster_name: my-override
+

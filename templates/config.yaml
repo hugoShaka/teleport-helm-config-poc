@@ -1,0 +1,2 @@
+{{ $configTemplate := printf "config.%s" .Values.chartMode }}
+{{ mustMergeOverwrite (include $configTemplate . | fromYaml) .Values.teleportConfig | toYaml }}
